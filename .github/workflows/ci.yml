@@ -51,3 +51,11 @@ jobs:
       - name: Re-check binaries against the safety invariants
         run: |
           python ci/check_imports.py build\Debug\wowsidecar.exe build\Debug\wowsidecar-manager.exe build\Debug\testpattern.exe
+        
+      - name: Upload binaries
+        uses: actions/upload-artifact@v4
+        with:
+          name: wow-sidecar-5070
+          path: |
+            build/Debug/wowsidecar.exe
+            build/Debug/wowsidecar-manager.exe
