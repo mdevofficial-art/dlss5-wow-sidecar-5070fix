@@ -44,13 +44,13 @@ jobs:
       # [device] tests need an NVIDIA GPU and are deliberately excluded: the
       # runners have none, and a skipped GPU test must not read as a pass.
       - name: Unit tests
-        run: build\tests\Debug\sidecar_tests.exe "[unit]"
+        run: build\tests\Release\sidecar_tests.exe "[unit]"
 
       # Belt and braces: assert the invariant against the finished binaries
       # too, independently of the build having run its post-build step.
       - name: Re-check binaries against the safety invariants
         run: |
-          python ci/check_imports.py build\Debug\wowsidecar.exe build\Debug\wowsidecar-manager.exe build\Release\testpattern.exe
+          python ci/check_imports.py build\Release\wowsidecar.exe build\Release\wowsidecar-manager.exe build\Release\testpattern.exe
         
       - name: Upload binaries
         uses: actions/upload-artifact@v4
