@@ -57,5 +57,5 @@ jobs:
         with:
           name: wow-sidecar-5070
           path: |
-            build/Debug/wowsidecar.exe
-            build/Debug/wowsidecar-manager.exe
+            build/Release/wowsidecar.exe
+            build/Release/wowsidecar-manager.exe
