@@ -39,7 +39,7 @@ jobs:
       # The invariant check runs as a post-build step on every executable, so a
       # forbidden import fails this step rather than shipping.
       - name: Build
-        run: cmake --build build --config Debug
+        run: cmake --build build --config Release
 
       # [device] tests need an NVIDIA GPU and are deliberately excluded: the
       # runners have none, and a skipped GPU test must not read as a pass.
