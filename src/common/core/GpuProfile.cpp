@@ -28,6 +28,7 @@ constexpr Range kRanges[] = {
     {0x2780, 0x28FF, GpuArch::Ada},
     {0x2B00, 0x2BFF, GpuArch::Blackwell},
     {0x2C00, 0x2DFF, GpuArch::Blackwell},
+    {0x2F00, 0x2FFF, GpuArch::Blackwell},
 };
 
 }  // namespace
